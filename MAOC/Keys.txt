@@ -1,0 +1,29 @@
+Tramite ::> Permiso de Matricula
+
+---------------------------------------------------------
+Proyecto::> Tramitator
+WORKFLOW_UPC/Web.config
+-------------------------------------------------------------
+<add key="Serv_GetHabilitCurso" value="v2/DetalleHabilitCurso" />
+<add key="Serv_GetDispersionHabilit" value="v3/ReglamentoCurricular" />
+<add key="Serv_GetPreRequisitos" value="v3/PermisoMatriculaPreReq" />
+
+<add key="EPE" value="FC"/>
+<add key="PREGRADO" value="AC"/>
+<add key="BANDEJA_EPE" value="matricula_epe@upc.pe"/>
+<add key="BANDEJA_PREGRADO" value="matrícula_pregrado@upc.pe"/>
+
+
+
+---------------------------------------------------------
+Proyecto ::> Semaforo
+WS_WorkFlowUPC/App.config
+---------------------------------------------------------
+
+<add key="Serv_AutorizAlumno" value="v3/DetalleHabilitCurso" />
+
+<add key="EPE" value="FC"/>
+<add key="PREGRADO" value="AC"/>
+<add key="BANDEJA_EPE" value="matricula_epe@upc.pe"/>
+<add key="BANDEJA_PREGRADO" value="matricula_pregrado@upc.pe"/>
+   
