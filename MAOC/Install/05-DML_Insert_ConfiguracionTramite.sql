@@ -407,7 +407,7 @@ BEGIN
 	   VALUES('GL_CURMALL', V_TIPO_SOLICITUD_MOD_ID_AC, 'El curso solicitado no debe figurar en la malla de tu carrera actual.', 1, 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_CURSEDE', V_TIPO_SOLICITUD_MOD_ID_AC, 'EL curso [CURSO] no se dicta en el campus actual. Revisa la vigencia en tu Calendario de Estudios para realizar el trámite de traslado de campus a una de estas sedes:  ', 1, 1, C_USER, SYSDATE); 
+	   VALUES('GL_CURSEDE', V_TIPO_SOLICITUD_MOD_ID_AC, 'EL curso [CURSO] no se dicta en tu campus de origen. Revisa la vigencia en tu Calendario de Estudios para realizar el trámite de traslado de campus a una de estas sedes:  ', 1, 1, C_USER, SYSDATE); 
                
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
 	   VALUES('GL_SERVICE', V_TIPO_SOLICITUD_MOD_ID_AC, 'Ocurrio un problema con los datos, comunicarse con ITI Service.', 1, 1, C_USER, SYSDATE); 
@@ -475,7 +475,7 @@ BEGIN
 	   VALUES('GL_CURMALL', V_TIPO_SOLICITUD_MOD_ID_FC, 'El curso solicitado no debe figurar en la malla de tu carrera actual.', 1, 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_CURSEDE', V_TIPO_SOLICITUD_MOD_ID_FC, 'EL curso [CURSO] no se dicta en el campus actual. Revisa la vigencia en tu Calendario de Estudios para realizar el trámite de traslado de campus a una de estas sedes: ', 1, 1, C_USER, SYSDATE); 
+	   VALUES('GL_CURSEDE', V_TIPO_SOLICITUD_MOD_ID_FC, 'EL curso [CURSO] no se dicta en tu campus de origen. Revisa la vigencia en tu Calendario de Estudios para realizar el trámite de traslado de campus a una de estas sedes: ', 1, 1, C_USER, SYSDATE); 
      
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
 	   VALUES('GL_SERVICE', V_TIPO_SOLICITUD_MOD_ID_FC, 'Ocurrio un problema con los datos, comunicarse con ITI Service.', 1, 1, C_USER, SYSDATE);      
@@ -533,7 +533,7 @@ BEGIN
 	   VALUES('CONTSOL', V_TIPO_SOLICITUD_MOD_ID_AC, 'Verifica que tu trámite haya sido procesado a través de  Mi UPC /Mis tramites/Tramites en curso', 'consideraciones.png', 'consideraciones.png', 9, 'Consideraciones:', 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('CONTSOL-02', V_TIPO_SOLICITUD_MOD_ID_AC, 'Todas las consultas relacionadas con el proceso deberán ser realizadas a través de nuestro canal de atención: Contacto Web.', NULL , NULL , 10, NULL , 1, C_USER, SYSDATE);
+	   VALUES('CONTSOL-02', V_TIPO_SOLICITUD_MOD_ID_AC, 'Todas las solicitudes relacionadas con el proceso deberán ser realizadas a través de nuestro canal de atención: Contacto Web.', NULL , NULL , 10, NULL , 1, C_USER, SYSDATE);
 	   
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA) 
 	   VALUES('CONTSOL-02', V_TIPO_SOLICITUD_MOD_ID_AC, 'Recuerda que tienes a tu disposición el WhatsApp UPC: 967756853/967756856, canal exclusivo para desbloqueo de cuentas.', NULL, NULL, 11 , NULL, 1, C_USER, SYSDATE);
@@ -556,7 +556,7 @@ BEGIN
 	   VALUES('CONTSOL', V_TIPO_SOLICITUD_MOD_ID_FC, 'Verifica que tu trámite haya sido procesado a través de  Mi UPC /Mis tramites/Tramites en curso', 'consideraciones.png', 'consideraciones.png', 9, 'Consideraciones:', 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('CONTSOL-02', V_TIPO_SOLICITUD_MOD_ID_FC, 'Todas las consultas relacionadas con el proceso deberán ser realizadas a través de nuestro canal de atención: Contacto Web.', NULL , NULL , 10, NULL , 1, C_USER, SYSDATE);
+	   VALUES('CONTSOL-02', V_TIPO_SOLICITUD_MOD_ID_FC, 'Todas las solicitudes relacionadas con el proceso deberán ser realizadas a través de nuestro canal de atención: Contacto Web.', NULL , NULL , 10, NULL , 1, C_USER, SYSDATE);
 	   
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA) 
 	   VALUES('CONTSOL-02', V_TIPO_SOLICITUD_MOD_ID_FC, 'Recuerda que tienes a tu disposición el WhatsApp UPC: 967756853/967756856, canal exclusivo para desbloqueo de cuentas.', NULL, NULL, 11 , NULL, 1, C_USER, SYSDATE);
