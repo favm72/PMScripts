@@ -681,9 +681,8 @@ BEGIN
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Para obtener más información sobre la solicitud, haz click [link]</p>
 
-<p>¡Qué tengas un buen día!</br>
-Atentamente,</p>
-<strong>Gestión Curricular, Programación Horaria y Matrícula. </strong>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','AC','UPC','PREGRADO-UPC');
+<p>Atentamente,</br>
+<strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','AC','UPC','PREGRADO-UPC');
 
 -- ok --
  INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -694,9 +693,8 @@ Atentamente,</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Para obtener más información sobre la solicitud, haz click [link]</p>
 
-<p>¡Qué tengas un buen día!</br>
-Atentamente,</p>
-<strong>Gestión Curricular, Programación Horaria y Matrícula. </strong>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','AC','UPC','PREGRADO-UPC');
+<p>Atentamente,</br>
+<strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','AC','UPC','PREGRADO-UPC');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -707,9 +705,8 @@ Atentamente,</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Para obtener más información sobre la solicitud, haz click [link]</p>
 
-<p>¡Qué tengas un buen día!</br>
-Atentamente,</p>
-<strong>Gestión Curricular, Programación Horaria y Matrícula. </strong>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','AC','UPC','PREGRADO-UPC');
+<p>Atentamente,</br>
+<strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','AC','UPC','PREGRADO-UPC');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -720,9 +717,8 @@ Atentamente,</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Para obtener más información sobre la solicitud, haz click [link]</p>
 
-<p>¡Qué tengas un buen día!</br>
-Atentamente,</p>
-<strong>Gestión Curricular, Programación Horaria y Matrícula. </strong>','1',C_USER,null,SYSDATE,NULL,NULL,'U','AC','UPC','PREGRADO-UPC');
+<p>Atentamente,</br>
+<strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','AC','UPC','PREGRADO-UPC');
     
         -- FC
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -733,9 +729,8 @@ Atentamente,</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Para obtener más información sobre la solicitud, haz click [link]</p>
 
-<p>¡Qué tengas un buen día!</br>
-Atentamente,</p>
-<strong>Gestión Curricular, Programación Horaria y Matrícula. </strong>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<p>Atentamente,</br>
+<strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 -- ok --
  INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -746,9 +741,8 @@ Atentamente,</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Para obtener más información sobre la solicitud, haz click [link]</p>
 
-<p>¡Qué tengas un buen día!</br>
-Atentamente,</p>
-<strong>Gestión Curricular, Programación Horaria y Matrícula. </strong>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<p>Atentamente,</br>
+<strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -759,9 +753,8 @@ Atentamente,</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Para obtener más información sobre la solicitud, haz click [link]</p>
 
-<p>¡Qué tengas un buen día!</br>
-Atentamente,</p>
-<strong>Gestión Curricular, Programación Horaria y Matrícula. </strong>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<p>Atentamente,</br>
+<strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -772,9 +765,8 @@ Atentamente,</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Para obtener más información sobre la solicitud, haz click [link]</p>
 
-<p>¡Qué tengas un buen día!</br>
-Atentamente,</p>
-<strong>Gestión Curricular, Programación Horaria y Matrícula. </strong>','1',C_USER,null,SYSDATE,NULL,NULL,'U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<p>Atentamente,</br>
+<strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 		---------------------------------
         --  WFW_NOTF_TRAMITE_DEST --
