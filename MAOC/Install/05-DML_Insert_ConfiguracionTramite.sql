@@ -679,8 +679,6 @@ BEGIN
 <p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
-<p>Para obtener más información sobre la solicitud, haz click [link]</p>
-
 <p>Atentamente,</br>
 <strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','AC','UPC','PREGRADO-UPC');
 
@@ -691,8 +689,6 @@ BEGIN
 <p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
-<p>Para obtener más información sobre la solicitud, haz click [link]</p>
-
 <p>Atentamente,</br>
 <strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','AC','UPC','PREGRADO-UPC');
 
@@ -703,8 +699,6 @@ BEGIN
 <p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
-<p>Para obtener más información sobre la solicitud, haz click [link]</p>
-
 <p>Atentamente,</br>
 <strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','AC','UPC','PREGRADO-UPC');
 
@@ -715,8 +709,6 @@ BEGIN
 <p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
-<p>Para obtener más información sobre la solicitud, haz click [link]</p>
-
 <p>Atentamente,</br>
 <strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','AC','UPC','PREGRADO-UPC');
     
@@ -727,8 +719,6 @@ BEGIN
 <p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
-<p>Para obtener más información sobre la solicitud, haz click [link]</p>
-
 <p>Atentamente,</br>
 <strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
@@ -739,8 +729,6 @@ BEGIN
 <p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
-<p>Para obtener más información sobre la solicitud, haz click [link]</p>
-
 <p>Atentamente,</br>
 <strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
@@ -751,8 +739,6 @@ BEGIN
 <p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
-<p>Para obtener más información sobre la solicitud, haz click [link]</p>
-
 <p>Atentamente,</br>
 <strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
@@ -763,8 +749,6 @@ BEGIN
 <p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
-<p>Para obtener más información sobre la solicitud, haz click [link]</p>
-
 <p>Atentamente,</br>
 <strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
