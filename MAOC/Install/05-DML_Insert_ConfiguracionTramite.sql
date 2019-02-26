@@ -3,21 +3,21 @@ DECLARE
     -- CONSTANTES CONFIGURABLES --
     ------------------------------
     C_COD_TIPO_SOL_TPADRE CONSTANT WFW_TIPO_SOLICITUD.COD_TIPO_SOL%TYPE := 'PM';
-    C_NOMBRE_TIPO_SOL_PADRE CONSTANT WFW_TIPO_SOLICITUD.NOMBRE%TYPE := 'Permisos de MatrÌcula'; -- TÌtulo del tr·mite padre (Cuadro principal del men˙)
+    C_NOMBRE_TIPO_SOL_PADRE CONSTANT WFW_TIPO_SOLICITUD.NOMBRE%TYPE := 'Permisos de Matr√≠cula'; -- T√≠tulo del tr√°mite padre (Cuadro principal del men√∫)
     
     C_ROL_ALUMNO CONSTANT WFW_ROL.NOMBRE%TYPE := 'ALUMNO_UPC';
     C_ROL_DIRECTOR CONSTANT WFW_ROL.NOMBRE%TYPE := 'DIRECTOR CDA';
     C_ROL_COUNTER_PM CONSTANT WFW_ROL.NOMBRE%TYPE := 'COUNTER PM';
     C_ROL_BANDEJA CONSTANT WFW_ROL.NOMBRE%TYPE := 'BANDEJA MODALIDAD';
     
-    C_NOMBRE_GRUPO_TRAMITE_PADRE CONSTANT WFW_GRUPO_TRAMITE.NOMBRE_GRUPO_TRAMITE%TYPE := 'Permisos de MatrÌcula'; -- TÌtulo de acordeon (Grupo Padre)
+    C_NOMBRE_GRUPO_TRAMITE_PADRE CONSTANT WFW_GRUPO_TRAMITE.NOMBRE_GRUPO_TRAMITE%TYPE := 'Permisos de Matr√≠cula'; -- T√≠tulo de acordeon (Grupo Padre)
     
     C_FECHA_INICIO_VIGENCIA_P1 CONSTANT WFW_VIGENCIA_TRAMITE.FECHA_INICIO%TYPE := TO_DATE('01-11-2018', 'dd-mm-yyyy'); -- Modificar aqui
     C_FECHA_FIN_VIGENCIA_P1 CONSTANT WFW_VIGENCIA_TRAMITE.FECHA_INICIO%TYPE := TO_DATE('28-02-2019', 'dd-mm-yyyy'); -- Modificar aqui
 
     C_PERIODO_P1 CONSTANT WFW_VIGENCIA_TRAMITE.COD_PERIODO%TYPE := '201702'; -- Modificar aqui
     
-    C_TIPO_PAGO CONSTANT WFW_TIPO_SOL_CONFIG.TIPO_PAGO%TYPE := 'BCO|BOL';   -- Modificar aquÌ, real asignado BCO
+    C_TIPO_PAGO CONSTANT WFW_TIPO_SOL_CONFIG.TIPO_PAGO%TYPE := 'BCO|BOL';   -- Modificar aqu√≠, real asignado BCO
     C_CODIGO_SPRINT CONSTANT WFW_TIPO_SOL_CONFIG.CODIGO_SPRINT%TYPE := '60700425'; -- Modificar aqui, real asignado 60700425
     
     C_NOMBRE_TABLA_TIPO_PROCESO CONSTANT WFW_MAESTRO.NOMBRE_TABLA%TYPE := 'TIPO_PROCESO';
@@ -65,14 +65,14 @@ DECLARE
     V_CODIGO_NUM WFW_MAESTRO.CODIGO_NUM%TYPE;
     
     ----------------------
-    -- TIEMPO EJECUCI”N --
+    -- TIEMPO EJECUCI√ìN --
     ----------------------
     V_TIME_START TIMESTAMP;
     V_TIME_END TIMESTAMP;
 BEGIN
 	V_TIME_START := SYSTIMESTAMP;
     
-    V_TIEMPO_PROCESO := 0;   -- TIEMPO TOTAL DEL TR¡MITE, ES LA SUMA DE LOS DÕAS DE CADA ACTIVIDAD
+    V_TIEMPO_PROCESO := 0;   -- TIEMPO TOTAL DEL TR√ÅMITE, ES LA SUMA DE LOS D√çAS DE CADA ACTIVIDAD
     
     -- ELIMINAR RECURSO SI EXISTE
     DELETE WFW_RECURSO
@@ -84,9 +84,9 @@ BEGIN
     INSERT INTO WFW_RECURSO
     (PRECURSO_ID, CODIGO, TIPO_ID, TITULO, NOMBRE, DESCRIPCION, URL, ORDEN, ICONO_URL, TOOLTIP, ACTIVO, USUARIO_CREA, FECHA_CREA)
     VALUES
-    (-1, 'WFW', (SELECT CODIGO_NUM FROM WFW_MAESTRO WHERE NOMBRE_TABLA = 'TIPO_RECURSO' AND CODIGO_STR = 'TRAM'), C_NOMBRE_TIPO_SOL_PADRE, C_COD_TIPO_SOL_TPADRE, 'Tr·mite para ' || C_NOMBRE_TIPO_SOL_PADRE, 'MenuWECC/Index', 1, NULL, NULL, 1, C_USER, SYSDATE);
+    (-1, 'WFW', (SELECT CODIGO_NUM FROM WFW_MAESTRO WHERE NOMBRE_TABLA = 'TIPO_RECURSO' AND CODIGO_STR = 'TRAM'), C_NOMBRE_TIPO_SOL_PADRE, C_COD_TIPO_SOL_TPADRE, 'Tr√°mite para ' || C_NOMBRE_TIPO_SOL_PADRE, 'MenuWECC/Index', 1, NULL, NULL, 1, C_USER, SYSDATE);
 
-    -- REGISTRAR TIPO SOLICITUD PADRE (TR¡MITE)
+    -- REGISTRAR TIPO SOLICITUD PADRE (TR√ÅMITE)
     --------------------
     -- TIPO SOLICITUD --
     --------------------
@@ -167,7 +167,7 @@ BEGIN
     ((SELECT ROL_ID FROM WFW_ROL WHERE NOMBRE = C_ROL_COUNTER_PM), (SELECT RECURSO_ID FROM WFW_RECURSO WHERE CODIGO = 'GMTMTR' AND URL = '/CounterRegistroTramite/Index'), 1, C_USER, SYSDATE);
     
     --------------------
-    --  GRUPO TR¡MITE --
+    --  GRUPO TR√ÅMITE --
     --------------------
     DBMS_OUTPUT.PUT_LINE('7 '|| to_char(sysdate,'DD/MM/YYYY HH:MI:SS')  );        
     
@@ -183,7 +183,7 @@ BEGIN
   
   
     INSERT INTO WFW_REQUISITO(COD_REQUISITO, DESCRIPCION_1, DESCRIPCION_2, DESCRIPCION_3, DESCRIPCION_4, COD_TIPO_REQ, ACTIVO, USUARIO_CREA, FECHA_CREA)
-    VALUES(C_COD_REQUISITO_VPERMATR, 'Valida si el alumno est· matriculado en el periodo actual del tr·mite', 'Valida si el alumno est· matriculado en el periodo actual del tr·mite', NULL, 'TODAS', 'SI/NO', 1, C_USER, SYSDATE);    
+    VALUES(C_COD_REQUISITO_VPERMATR, 'Valida si el alumno est√° matriculado en el periodo actual del tr√°mite', 'Valida si el alumno est√° matriculado en el periodo actual del tr√°mite', NULL, 'TODAS', 'SI/NO', 1, C_USER, SYSDATE);    
     
     INSERT INTO WFW_REQUISITO(COD_REQUISITO, DESCRIPCION_1, DESCRIPCION_2, DESCRIPCION_3, DESCRIPCION_4, COD_TIPO_REQ, ACTIVO, USUARIO_CREA, FECHA_CREA)
     VALUES(C_COD_REQUISITO_VPERSOLI, 'Valida solicitud en el periodo actual', 'Valida solicitud en el periodo actual', NULL, 'TODAS', 'SI/NO', 1, C_USER, SYSDATE);    
@@ -200,14 +200,14 @@ BEGIN
     INSERT INTO WFW_REQUISITO(COD_REQUISITO, DESCRIPCION_1, DESCRIPCION_2, DESCRIPCION_3, DESCRIPCION_4, COD_TIPO_REQ, ACTIVO, USUARIO_CREA, FECHA_CREA)
     VALUES(C_COD_REQUISITO_VCARGAHABIL, 'Valida si tiene Carta Habil', 'Valida si tiene Carta de Permanencia', NULL, 'TODAS', 'SI/NO', 1, C_USER, SYSDATE);
   	
-    -- MATRICULARME EN ASIGNATURAS CON DISPERSI”N MAYOR A 3 NIVELES
+    -- MATRICULARME EN ASIGNATURAS CON DISPERSI√ìN MAYOR A 3 NIVELES
     BEGIN
        V_COD_TIPO_SOL := 'MAOC';
        V_NOMBRE_TRAMITE := 'Permiso para llevar cursos de otra carrera';   -- Fila del Grupo (Grupo Padre)
        
-       V_TIEMPO_PROCESO := 1;   -- TIEMPO TOTAL DEL TR¡MITE, ES LA SUMA DE LOS DÕAS DE CADA ACTIVIDAD ->JONATHAN:CONSULTAR 
+       V_TIEMPO_PROCESO := 1;   -- TIEMPO TOTAL DEL TR√ÅMITE, ES LA SUMA DE LOS D√çAS DE CADA ACTIVIDAD ->JONATHAN:CONSULTAR 
 	   
-	     V_NOMBRE_TRAMITE_NOTIF := 'Permisos de MatrÌcula';	-- NotificaciÛn de correo
+	     V_NOMBRE_TRAMITE_NOTIF := 'Permisos de Matr√≠cula';	-- Notificaci√≥n de correo
 	   
 	     V_MAX_NUM_COPIAS := 8; --JONATHAN:CONSULTAR
        
@@ -296,7 +296,7 @@ BEGIN
           TIPO_SOLICITUD_ID = V_TIPO_SOLICITUD_ID;
        
        --------------------
-       --  GRUPO TR¡MITE --
+       --  GRUPO TR√ÅMITE --
        --------------------
        DBMS_OUTPUT.PUT_LINE('15 '|| to_char(sysdate,'DD/MM/YYYY HH:MI:SS')  );        
        
@@ -367,14 +367,14 @@ BEGIN
 	   -- Inicio Glosas obligatorias -> "Esto se ejecuta al enviar la solicitud"
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_VALTRA5', V_TIPO_SOLICITUD_MOD_ID_AC, 'Este tr·mite no se encuentra vigente. Fecha de vigencia [FCHV1] - [FCHV2].', 1, 1, C_USER, SYSDATE);
+	   VALUES('GL_VALTRA5', V_TIPO_SOLICITUD_MOD_ID_AC, 'Este tr√°mite no se encuentra vigente. Fecha de vigencia [FCHV1] - [FCHV2].', 1, 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_CREATR6', V_TIPO_SOLICITUD_MOD_ID_AC, 'Puedes verificar que tu tr·mite se encuentra registrado, ingresando a MI UPC/ Mis tr·mites/ Tramites en curso.', 1, 1, C_USER, SYSDATE);
+	   VALUES('GL_CREATR6', V_TIPO_SOLICITUD_MOD_ID_AC, 'Puedes verificar que tu tr√°mite se encuentra registrado, ingresando a MI UPC/ Mis tr√°mites/ Tramites en curso.', 1, 1, C_USER, SYSDATE);
 	   -- Fin Glosas obligatorias
 
  	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_INF01', V_TIPO_SOLICITUD_MOD_ID_PAD_AC, 'SOLICITUD DE PERMISOS DE MATRÕCULA', 1, 1, C_USER, SYSDATE);
+	   VALUES('GL_INF01', V_TIPO_SOLICITUD_MOD_ID_PAD_AC, 'SOLICITUD DE PERMISOS DE MATR√çCULA', 1, 1, C_USER, SYSDATE);
     
  	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
 	   VALUES('GL_REQUISI', V_TIPO_SOLICITUD_MOD_ID_AC, 'Ud. no cuenta con los requisitos suficientes', 1, 1, C_USER, SYSDATE);
@@ -383,19 +383,19 @@ BEGIN
 	   VALUES('GL_VPERMAT', V_TIPO_SOLICITUD_MOD_ID_AC, 'El alumno se encuentra matriculado en el periodo actual.', 1, 1, C_USER, SYSDATE);
      
  	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_VPERSOL', V_TIPO_SOLICITUD_MOD_ID_AC, 'El alumno ya tiene registrada una solicitud de permisos de matrÌcula para el periodo actual.', 1, 1, C_USER, SYSDATE);
+	   VALUES('GL_VPERSOL', V_TIPO_SOLICITUD_MOD_ID_AC, 'El alumno ya tiene registrada una solicitud de permisos de matr√≠cula para el periodo actual.', 1, 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_REQBAJA', V_TIPO_SOLICITUD_MOD_ID_AC, 'El alumno presenta baja acadÈmica.', 1, 1, C_USER, SYSDATE);
+	   VALUES('GL_REQBAJA', V_TIPO_SOLICITUD_MOD_ID_AC, 'El alumno presenta baja acad√©mica.', 1, 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_REQEGR', V_TIPO_SOLICITUD_MOD_ID_AC, 'La condiciÛn del alumno se encuentra como Egresado.', 1, 1, C_USER, SYSDATE);                
+	   VALUES('GL_REQEGR', V_TIPO_SOLICITUD_MOD_ID_AC, 'La condici√≥n del alumno se encuentra como Egresado.', 1, 1, C_USER, SYSDATE);                
      
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
 	   VALUES('GL_PERMANE', V_TIPO_SOLICITUD_MOD_ID_AC, 'El alumno no tiene carta de permanencia registrada.', 1, 1, C_USER, SYSDATE);                     
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_CARGAHA', V_TIPO_SOLICITUD_MOD_ID_AC, 'El alumno no tiene carga h·bil para el periodo actual.', 1, 1, C_USER, SYSDATE);
+	   VALUES('GL_CARGAHA', V_TIPO_SOLICITUD_MOD_ID_AC, 'El alumno no tiene carga h√°bil para el periodo actual.', 1, 1, C_USER, SYSDATE);
      
  	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
 	   VALUES('GL_SINEVAL', V_TIPO_SOLICITUD_MOD_ID_AC, 'No hay asignaturas para la carrera seleccionada', 1, 1, C_USER, SYSDATE);
@@ -407,13 +407,13 @@ BEGIN
 	   VALUES('GL_CURMALL', V_TIPO_SOLICITUD_MOD_ID_AC, 'El curso solicitado no debe figurar en la malla de tu carrera actual.', 1, 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_CURSEDE', V_TIPO_SOLICITUD_MOD_ID_AC, 'EL curso [CURSO] no se dicta en tu campus de origen. Revisa la vigencia en tu Calendario de Estudios para realizar el tr·mite de traslado de campus a una de estas sedes:  ', 1, 1, C_USER, SYSDATE); 
+	   VALUES('GL_CURSEDE', V_TIPO_SOLICITUD_MOD_ID_AC, 'El curso [CURSO] no se dicta en tu campus de origen. Revisa la vigencia en tu Calendario de Estudios para realizar el tr√°mite de traslado de campus a una de estas sedes:  ', 1, 1, C_USER, SYSDATE); 
                
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
 	   VALUES('GL_SERVICE', V_TIPO_SOLICITUD_MOD_ID_AC, 'Ocurrio un problema con los datos, comunicarse con ITI Service.', 1, 1, C_USER, SYSDATE); 
      
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_CREDITA', V_TIPO_SOLICITUD_MOD_ID_AC, 'El alumno superÛ el maximo de crÈditos permitidos.', 1, 1, C_USER, SYSDATE);      
+	   VALUES('GL_CREDITA', V_TIPO_SOLICITUD_MOD_ID_AC, 'El alumno super√≥ el maximo de cr√©ditos permitidos.', 1, 1, C_USER, SYSDATE);      
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
 	   VALUES('GL_ASIGNAT', V_TIPO_SOLICITUD_MOD_ID_AC, 'La Cantidad de Cursos supera al permitido.', 1, 1, C_USER, SYSDATE);           
@@ -428,21 +428,21 @@ BEGIN
 	   VALUES('GL_PREREQU', V_TIPO_SOLICITUD_MOD_ID_AC, 'La carrera seleccionada no cuenta con cursos disponibles.', 1, 1, C_USER, SYSDATE);
 	   
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_CUARTAV', V_TIPO_SOLICITUD_MOD_ID_AC, 'Alumno con carta de permanencia vigente por tener pendiente de aprobaciÛn un curso por cuarta vez.', 1, 1, C_USER, SYSDATE);
+	   VALUES('GL_CUARTAV', V_TIPO_SOLICITUD_MOD_ID_AC, 'Alumno con carta de permanencia vigente por tener pendiente de aprobaci√≥n un curso por cuarta vez.', 1, 1, C_USER, SYSDATE);
        
 		-- FC
 		-- Inicio Glosas obligatorias   
       
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_VALTRA5', V_TIPO_SOLICITUD_MOD_ID_FC, 'Este tr·mite no se encuentra vigente. Fecha de vigencia [FCHV1] - [FCHV2].', 1, 1, C_USER, SYSDATE);
+	   VALUES('GL_VALTRA5', V_TIPO_SOLICITUD_MOD_ID_FC, 'Este tr√°mite no se encuentra vigente. Fecha de vigencia [FCHV1] - [FCHV2].', 1, 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_CREATR6', V_TIPO_SOLICITUD_MOD_ID_FC, 'Puedes verificar que tu tr·mite se encuentra registrado, ingresando a MI UPC/ Mis tr·mites/ Tramites en curso.', 1, 1, C_USER, SYSDATE);
+	   VALUES('GL_CREATR6', V_TIPO_SOLICITUD_MOD_ID_FC, 'Puedes verificar que tu tr√°mite se encuentra registrado, ingresando a MI UPC/ Mis tr√°mites/ Tramites en curso.', 1, 1, C_USER, SYSDATE);
 
 	   -- Fin Glosas obligatorias  
      
      INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-     VALUES('GL_INF01', V_TIPO_SOLICITUD_MOD_ID_PAD_FC, 'SOLICITUD DE PERMISO PARA MATRÕCULA', 1, 1, C_USER, SYSDATE);
+     VALUES('GL_INF01', V_TIPO_SOLICITUD_MOD_ID_PAD_FC, 'SOLICITUD DE PERMISO PARA MATR√çCULA', 1, 1, C_USER, SYSDATE);
      
  	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
 	   VALUES('GL_REQUISI', V_TIPO_SOLICITUD_MOD_ID_FC, 'Ud. no cuenta con los requisitos suficientes', 1, 1, C_USER, SYSDATE);
@@ -451,19 +451,19 @@ BEGIN
 	   VALUES('GL_VPERMAT', V_TIPO_SOLICITUD_MOD_ID_FC, 'El alumno se encuentra matriculado en el periodo actual.', 1, 1, C_USER, SYSDATE);
    
  	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_VPERSOL', V_TIPO_SOLICITUD_MOD_ID_FC, 'El alumno ya tiene registrada una solicitud de permisos de matrÌcula para el periodo actual.', 1, 1, C_USER, SYSDATE);
+	   VALUES('GL_VPERSOL', V_TIPO_SOLICITUD_MOD_ID_FC, 'El alumno ya tiene registrada una solicitud de permisos de matr√≠cula para el periodo actual.', 1, 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_REQBAJA', V_TIPO_SOLICITUD_MOD_ID_FC, 'El alumno presenta baja acadÈmica.', 1, 1, C_USER, SYSDATE);
+	   VALUES('GL_REQBAJA', V_TIPO_SOLICITUD_MOD_ID_FC, 'El alumno presenta baja acad√©mica.', 1, 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_REQEGR', V_TIPO_SOLICITUD_MOD_ID_FC, 'La condiciÛn del alumno se encuentra como Egresado.', 1, 1, C_USER, SYSDATE);
+	   VALUES('GL_REQEGR', V_TIPO_SOLICITUD_MOD_ID_FC, 'La condici√≥n del alumno se encuentra como Egresado.', 1, 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
 	   VALUES('GL_PERMANE', V_TIPO_SOLICITUD_MOD_ID_FC, 'El alumno no tiene carta de permanencia registrada.', 1, 1, C_USER, SYSDATE);                     
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_CARGAHA', V_TIPO_SOLICITUD_MOD_ID_FC, 'El alumno no tiene carga h·bil para el periodo actual.', 1, 1, C_USER, SYSDATE);
+	   VALUES('GL_CARGAHA', V_TIPO_SOLICITUD_MOD_ID_FC, 'El alumno no tiene carga h√°bil para el periodo actual.', 1, 1, C_USER, SYSDATE);
     
  	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
 	   VALUES('GL_SINEVAL', V_TIPO_SOLICITUD_MOD_ID_FC, 'No hay asignaturas para la carrera seleccionada', 1, 1, C_USER, SYSDATE);     
@@ -475,13 +475,13 @@ BEGIN
 	   VALUES('GL_CURMALL', V_TIPO_SOLICITUD_MOD_ID_FC, 'El curso solicitado no debe figurar en la malla de tu carrera actual.', 1, 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_CURSEDE', V_TIPO_SOLICITUD_MOD_ID_FC, 'EL curso [CURSO] no se dicta en tu campus de origen. Revisa la vigencia en tu Calendario de Estudios para realizar el tr·mite de traslado de campus a una de estas sedes: ', 1, 1, C_USER, SYSDATE); 
+	   VALUES('GL_CURSEDE', V_TIPO_SOLICITUD_MOD_ID_FC, 'El curso [CURSO] no se dicta en tu campus de origen. Revisa la vigencia en tu Calendario de Estudios para realizar el tr√°mite de traslado de campus a una de estas sedes: ', 1, 1, C_USER, SYSDATE); 
      
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
 	   VALUES('GL_SERVICE', V_TIPO_SOLICITUD_MOD_ID_FC, 'Ocurrio un problema con los datos, comunicarse con ITI Service.', 1, 1, C_USER, SYSDATE);      
      
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_CREDITA', V_TIPO_SOLICITUD_MOD_ID_FC, 'El alumno superÛ el maximo de crÈditos permitidos.', 1, 1, C_USER, SYSDATE);           
+	   VALUES('GL_CREDITA', V_TIPO_SOLICITUD_MOD_ID_FC, 'El alumno super√≥ el maximo de cr√©ditos permitidos.', 1, 1, C_USER, SYSDATE);           
 
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
 	   VALUES('GL_ASIGNAT', V_TIPO_SOLICITUD_MOD_ID_FC, 'La Cantidad de Cursos supera al permitido.', 1, 1, C_USER, SYSDATE);        
@@ -496,7 +496,7 @@ BEGIN
 	   VALUES('GL_PREREQU', V_TIPO_SOLICITUD_MOD_ID_FC, 'La carrera seleccionada no cuenta con cursos disponibles.', 1, 1, C_USER, SYSDATE);
 	   
 	   INSERT INTO WFW_GLOSA_TRAMITE(COD_GLOSA_TRAMITE, TIPO_SOLICITUD_MOD_ID, MENSAJE, ORDEN, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('GL_CUARTAV', V_TIPO_SOLICITUD_MOD_ID_FC, 'Alumno con carta de permanencia vigente por tener pendiente de aprobaciÛn un curso por cuarta vez.', 1, 1, C_USER, SYSDATE);
+	   VALUES('GL_CUARTAV', V_TIPO_SOLICITUD_MOD_ID_FC, 'Alumno con carta de permanencia vigente por tener pendiente de aprobaci√≥n un curso por cuarta vez.', 1, 1, C_USER, SYSDATE);
        
        ---------------------------
 	   --  TIPO SOL CONFIG --
@@ -518,48 +518,48 @@ BEGIN
 
 	   -- AC
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('DEFTSOL', V_TIPO_SOLICITUD_MOD_ID_AC, 'Permite llevar cursos de otra carrera en la matricula actual.', 'definicion.png', 'definicion.png', 1, 'DefiniciÛn:', 1, C_USER, SYSDATE);
+	   VALUES('DEFTSOL', V_TIPO_SOLICITUD_MOD_ID_AC, 'Permite llevar cursos de otra carrera en la matricula actual.', 'definicion.png', 'definicion.png', 1, 'Definici√≥n:', 1, C_USER, SYSDATE);
 	   
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA) 
 	   VALUES('DIRTSOL', V_TIPO_SOLICITUD_MOD_ID_AC, 'Alumnos Pregrado / Pregrado EPE.', 'dirigido-a.png', 'dirigido-a.png', 2, 'Dirigido a:', 1, C_USER, SYSDATE);
 	   
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('TIETSOL', V_TIPO_SOLICITUD_MOD_ID_AC, '1 dÌa.', 'tiempo.png', 'tiempo.png', 3, 'Tiempo:', 1, C_USER, SYSDATE);
+	   VALUES('TIETSOL', V_TIPO_SOLICITUD_MOD_ID_AC, '1 d√≠a.', 'tiempo.png', 'tiempo.png', 3, 'Tiempo:', 1, C_USER, SYSDATE);
 	   
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('COSTSOL', V_TIPO_SOLICITUD_MOD_ID_AC, 'Gratuito.', 'costo.png', 'costo.png', 5, 'Precio del tr·mite:', 1, C_USER, SYSDATE);
+	   VALUES('COSTSOL', V_TIPO_SOLICITUD_MOD_ID_AC, 'Gratuito.', 'costo.png', 'costo.png', 5, 'Precio del tr√°mite:', 1, C_USER, SYSDATE);
 	   
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('CONTSOL', V_TIPO_SOLICITUD_MOD_ID_AC, 'Verifica que tu tr·mite haya sido procesado a travÈs de  Mi UPC /Mis tramites/Tramites en curso', 'consideraciones.png', 'consideraciones.png', 9, 'Consideraciones:', 1, C_USER, SYSDATE);
+	   VALUES('CONTSOL', V_TIPO_SOLICITUD_MOD_ID_AC, 'Verifica que tu tr√°mite haya sido procesado a trav√©s de  Mi UPC /Mis tramites/Tramites en curso', 'consideraciones.png', 'consideraciones.png', 9, 'Consideraciones:', 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('CONTSOL-02', V_TIPO_SOLICITUD_MOD_ID_AC, 'Todas las solicitudes relacionadas con el proceso deber·n ser realizadas a travÈs de nuestro canal de atenciÛn: Contacto Web.', NULL , NULL , 10, NULL , 1, C_USER, SYSDATE);
+	   VALUES('CONTSOL-02', V_TIPO_SOLICITUD_MOD_ID_AC, 'Todas las solicitudes relacionadas con el proceso deber√°n ser realizadas a trav√©s de nuestro canal de atenci√≥n: Contacto Web.', NULL , NULL , 10, NULL , 1, C_USER, SYSDATE);
 	   
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA) 
-	   VALUES('CONTSOL-02', V_TIPO_SOLICITUD_MOD_ID_AC, 'Recuerda que tienes a tu disposiciÛn el WhatsApp UPC: 967756853/967756856, canal exclusivo para desbloqueo de cuentas.', NULL, NULL, 11 , NULL, 1, C_USER, SYSDATE);
+	   VALUES('CONTSOL-02', V_TIPO_SOLICITUD_MOD_ID_AC, 'Recuerda que tienes a tu disposici√≥n el WhatsApp UPC: 967756853/967756856, canal exclusivo para desbloqueo de cuentas.', NULL, NULL, 11 , NULL, 1, C_USER, SYSDATE);
 
        -- FC
             
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('DEFTSOL', V_TIPO_SOLICITUD_MOD_ID_FC, 'Permite llevar cursos de otra carrera en la matricula actual.', 'definicion.png', 'definicion.png', 1, 'DefiniciÛn:', 1, C_USER, SYSDATE);
+	   VALUES('DEFTSOL', V_TIPO_SOLICITUD_MOD_ID_FC, 'Permite llevar cursos de otra carrera en la matricula actual.', 'definicion.png', 'definicion.png', 1, 'Definici√≥n:', 1, C_USER, SYSDATE);
 	   
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA) 
 	   VALUES('DIRTSOL', V_TIPO_SOLICITUD_MOD_ID_FC, 'Alumnos Pregrado / Pregrado EPE.', 'dirigido-a.png', 'dirigido-a.png', 2, 'Dirigido a:', 1, C_USER, SYSDATE);
 	   
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('TIETSOL', V_TIPO_SOLICITUD_MOD_ID_FC, '1 dÌa.', 'tiempo.png', 'tiempo.png', 3, 'Tiempo:', 1, C_USER, SYSDATE);
+	   VALUES('TIETSOL', V_TIPO_SOLICITUD_MOD_ID_FC, '1 d√≠a.', 'tiempo.png', 'tiempo.png', 3, 'Tiempo:', 1, C_USER, SYSDATE);
 	   
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('COSTSOL', V_TIPO_SOLICITUD_MOD_ID_FC, 'Gratuito.', 'costo.png', 'costo.png', 5, 'Precio del tr·mite:', 1, C_USER, SYSDATE);
+	   VALUES('COSTSOL', V_TIPO_SOLICITUD_MOD_ID_FC, 'Gratuito.', 'costo.png', 'costo.png', 5, 'Precio del tr√°mite:', 1, C_USER, SYSDATE);
 	   
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('CONTSOL', V_TIPO_SOLICITUD_MOD_ID_FC, 'Verifica que tu tr·mite haya sido procesado a travÈs de  Mi UPC /Mis tramites/Tramites en curso', 'consideraciones.png', 'consideraciones.png', 9, 'Consideraciones:', 1, C_USER, SYSDATE);
+	   VALUES('CONTSOL', V_TIPO_SOLICITUD_MOD_ID_FC, 'Verifica que tu tr√°mite haya sido procesado a trav√©s de  Mi UPC /Mis tramites/Tramites en curso', 'consideraciones.png', 'consideraciones.png', 9, 'Consideraciones:', 1, C_USER, SYSDATE);
 
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA)
-	   VALUES('CONTSOL-02', V_TIPO_SOLICITUD_MOD_ID_FC, 'Todas las solicitudes relacionadas con el proceso deber·n ser realizadas a travÈs de nuestro canal de atenciÛn: Contacto Web.', NULL , NULL , 10, NULL , 1, C_USER, SYSDATE);
+	   VALUES('CONTSOL-02', V_TIPO_SOLICITUD_MOD_ID_FC, 'Todas las solicitudes relacionadas con el proceso deber√°n ser realizadas a trav√©s de nuestro canal de atenci√≥n: Contacto Web.', NULL , NULL , 10, NULL , 1, C_USER, SYSDATE);
 	   
 	   INSERT INTO WFW_AVISO_TIPO_SOL(COD_AVISO, TIPO_SOLICITUD_MOD_ID, MENSAJE, NOMBRE_ICONO, RUTA_ICONO, ORDEN, TITULO, ACTIVO, USUARIO_CREA, FECHA_CREA) 
-	   VALUES('CONTSOL-02', V_TIPO_SOLICITUD_MOD_ID_FC, 'Recuerda que tienes a tu disposiciÛn el WhatsApp UPC: 967756853/967756856, canal exclusivo para desbloqueo de cuentas.', NULL, NULL, 11 , NULL, 1, C_USER, SYSDATE);
+	   VALUES('CONTSOL-02', V_TIPO_SOLICITUD_MOD_ID_FC, 'Recuerda que tienes a tu disposici√≥n el WhatsApp UPC: 967756853/967756856, canal exclusivo para desbloqueo de cuentas.', NULL, NULL, 11 , NULL, 1, C_USER, SYSDATE);
 	   
 	   ---------------------
 	   --  ACTIVIDAD --
@@ -604,43 +604,43 @@ BEGIN
      (SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'ACTIVIDAD' AND UPPER(VALOR) = 'TERMINADA'),
      'NOT REGISTRO TRAM ' || V_COD_TIPO_SOL,0,0,'Solicitud de ' || V_NOMBRE_TRAMITE_NOTIF,
 '<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N∞ [codigosol], de ì' || V_NOMBRE_TRAMITE_NOTIF || ' ñ Llevar cursos de otra carreraî</br>
- realizado el [fechasol], se registrÛ satisfactoriamente.</p>
+<p>Su solicitud N¬∞ [codigosol], de ‚Äú' || V_NOMBRE_TRAMITE_NOTIF || ' ‚Äì Llevar cursos de otra carrera‚Äù</br>
+ realizado el [fechasol], se registr√≥ satisfactoriamente.</p>
 <table border="1" cellpadding="1" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td>Curso</td><td>Carrera</td><td>Estado</td></tr>[grillacursos]</table>
-<p>Por favor, esperar la evaluaciÛn realizada por el ·rea correspondiente.</p>
+<p>Por favor, esperar la evaluaci√≥n realizada por el √°rea correspondiente.</p>
 <p>Atentamente,</p>
-<strong>GestiÛn Curricular, ProgramaciÛn Horaria y MatrÌcula. </strong>','1',C_USER,SYSDATE,null,'U','AC','UPC','PREGRADO-UPC');
+<strong>Gesti√≥n Curricular, Programaci√≥n Horaria y Matr√≠cula. </strong>','1',C_USER,SYSDATE,null,'U','AC','UPC','PREGRADO-UPC');
 
         INSERT INTO WFW_NOTIFICACION (ACTIVIDAD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,FECHA_CREA,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
-        VALUES (V_ACTIVIDAD_ID_EVAL_DIRECTOR,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'ACTIVIDAD' AND UPPER(VALOR) = 'PENDIENTE'),'NOT EVALUACION REENVIO DIRECTOR ' || V_COD_TIPO_SOL,0,0,'Solicitud pendiente de evaluaciÛn - ' || V_NOMBRE_TRAMITE_NOTIF,
+        VALUES (V_ACTIVIDAD_ID_EVAL_DIRECTOR,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'ACTIVIDAD' AND UPPER(VALOR) = 'PENDIENTE'),'NOT EVALUACION REENVIO DIRECTOR ' || V_COD_TIPO_SOL,0,0,'Solicitud pendiente de evaluaci√≥n - ' || V_NOMBRE_TRAMITE_NOTIF,
 '<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N∞ [codigosol], de ì' || V_NOMBRE_TRAMITE_NOTIF || ' ñ Llevar cursos de otra carreraî</br>
- realizado el [fechasol], se registrÛ satisfactoriamente.</p>
+<p>Su solicitud N¬∞ [codigosol], de ‚Äú' || V_NOMBRE_TRAMITE_NOTIF || ' ‚Äì Llevar cursos de otra carrera‚Äù</br>
+ realizado el [fechasol], se registr√≥ satisfactoriamente.</p>
 <table border="1" cellpadding="1" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td>Curso</td><td>Carrera</td><td>Estado</td></tr>[grillacursos]</table>
-<p>Por favor, esperar la evaluaciÛn realizada por el ·rea correspondiente.</p>
+<p>Por favor, esperar la evaluaci√≥n realizada por el √°rea correspondiente.</p>
 <p>Atentamente,</p>
-<strong>GestiÛn Curricular, ProgramaciÛn Horaria y MatrÌcula. </strong>','1',C_USER,SYSDATE,'TRENV','U','AC','UPC','PREGRADO-UPC');
+<strong>Gesti√≥n Curricular, Programaci√≥n Horaria y Matr√≠cula. </strong>','1',C_USER,SYSDATE,'TRENV','U','AC','UPC','PREGRADO-UPC');
 
         -- FC
         INSERT INTO WFW_NOTIFICACION (ACTIVIDAD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,FECHA_CREA,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_ACTIVIDAD_ID_REGISTRO,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'ACTIVIDAD' AND UPPER(VALOR) = 'TERMINADA'),'NOT REGISTRO TRAM ' || V_COD_TIPO_SOL,0,0,'Solicitud de ' || V_NOMBRE_TRAMITE_NOTIF,
 '<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N∞ [codigosol], de ì' || V_NOMBRE_TRAMITE_NOTIF || ' ñ Llevar cursos de otra carreraî</br>
- realizado el [fechasol], se registrÛ satisfactoriamente.</p>
+<p>Su solicitud N¬∞ [codigosol], de ‚Äú' || V_NOMBRE_TRAMITE_NOTIF || ' ‚Äì Llevar cursos de otra carrera‚Äù</br>
+ realizado el [fechasol], se registr√≥ satisfactoriamente.</p>
 <table border="1" cellpadding="1" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td>Curso</td><td>Carrera</td><td>Estado</td></tr>[grillacursos]</table>
-<p>Por favor, esperar la evaluaciÛn realizada por el ·rea correspondiente.</p>
+<p>Por favor, esperar la evaluaci√≥n realizada por el √°rea correspondiente.</p>
 <p>Atentamente,</p>
-<strong>GestiÛn Curricular, ProgramaciÛn Horaria y MatrÌcula. </strong>','1',C_USER,SYSDATE,null,'U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<strong>Gesti√≥n Curricular, Programaci√≥n Horaria y Matr√≠cula. </strong>','1',C_USER,SYSDATE,null,'U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
         INSERT INTO WFW_NOTIFICACION (ACTIVIDAD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,FECHA_CREA,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
-        VALUES (V_ACTIVIDAD_ID_EVAL_DIRECTOR,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'ACTIVIDAD' AND UPPER(VALOR) = 'PENDIENTE'),'NOT EVALUACION REENVIO DIRECTOR ' || V_COD_TIPO_SOL,0,0,'Solicitud pendiente de evaluaciÛn - ' || V_NOMBRE_TRAMITE_NOTIF,
+        VALUES (V_ACTIVIDAD_ID_EVAL_DIRECTOR,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'ACTIVIDAD' AND UPPER(VALOR) = 'PENDIENTE'),'NOT EVALUACION REENVIO DIRECTOR ' || V_COD_TIPO_SOL,0,0,'Solicitud pendiente de evaluaci√≥n - ' || V_NOMBRE_TRAMITE_NOTIF,
 '<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N∞ [codigosol], de ì' || V_NOMBRE_TRAMITE_NOTIF || ' ñ Llevar cursos de otra carreraî</br>
- realizado el [fechasol], se registrÛ satisfactoriamente.</p>
+<p>Su solicitud N¬∞ [codigosol], de ‚Äú' || V_NOMBRE_TRAMITE_NOTIF || ' ‚Äì Llevar cursos de otra carrera‚Äù</br>
+ realizado el [fechasol], se registr√≥ satisfactoriamente.</p>
 <table border="1" cellpadding="1" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td>Curso</td><td>Carrera</td><td>Estado</td></tr>[grillacursos]</table>
-<p>Por favor, esperar la evaluaciÛn realizada por el ·rea correspondiente.</p>
+<p>Por favor, esperar la evaluaci√≥n realizada por el √°rea correspondiente.</p>
 <p>Atentamente,</p>
-<strong>GestiÛn Curricular, ProgramaciÛn Horaria y MatrÌcula. </strong>','1',C_USER,SYSDATE,'TRENV','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<strong>Gesti√≥n Curricular, Programaci√≥n Horaria y Matr√≠cula. </strong>','1',C_USER,SYSDATE,'TRENV','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 
 
@@ -668,89 +668,89 @@ BEGIN
         VALUES((SELECT NOTIFICACION_ID FROM WFW_NOTIFICACION WHERE NOMBRE = 'NOT EVALUACION REENVIO DIRECTOR ' || V_COD_TIPO_SOL AND COD_MODAL_ESTUDIO = 'FC'), 0, (SELECT ROL_ID FROM WFW_ROL WHERE NOMBRE = C_ROL_BANDEJA), 0, 1, C_USER, SYSDATE);
 		
 		--------------------------------
-        --  NOTIFICACION TR¡MITE --
+        --  NOTIFICACION TR√ÅMITE --
         --------------------------------
      DBMS_OUTPUT.PUT_LINE('24 '|| to_char(sysdate,'DD/MM/YYYY HH:MI:SS')  );                                 
         
         -- AC
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
-        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE',0,0,'Respuesta a la solicitud N∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
+        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE',0,0,'Respuesta a la solicitud N¬∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
 '<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N∞ [codigosol], de ìPermisos de MatrÌcula ñ Llevar cursos de otra carreraî</br>
+<p>Su solicitud N¬∞ [codigosol], de ‚ÄúPermisos de Matr√≠cula ‚Äì Llevar cursos de otra carrera‚Äù</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</br>
-<strong>GestiÛn Curricular, ProgramaciÛn Horaria y MatrÌcula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','AC','UPC','PREGRADO-UPC');
+<strong>Gesti√≥n Curricular, Programaci√≥n Horaria y Matr√≠cula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','AC','UPC','PREGRADO-UPC');
 
 -- ok --
  INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
-        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE PARCIALMENTE',0,0,'Respuesta a la solicitud N∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
+        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE PARCIALMENTE',0,0,'Respuesta a la solicitud N¬∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
 '<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N∞ [codigosol], de ìPermisos de MatrÌcula ñ Llevar cursos de otra carreraî</br>
+<p>Su solicitud N¬∞ [codigosol], de ‚ÄúPermisos de Matr√≠cula ‚Äì Llevar cursos de otra carrera‚Äù</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</br>
-<strong>GestiÛn Curricular, ProgramaciÛn Horaria y MatrÌcula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','AC','UPC','PREGRADO-UPC');
+<strong>Gesti√≥n Curricular, Programaci√≥n Horaria y Matr√≠cula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','AC','UPC','PREGRADO-UPC');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
-        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' NO PROCEDE',0,0,'Respuesta a la solicitud N∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
+        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' NO PROCEDE',0,0,'Respuesta a la solicitud N¬∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
 '<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N∞ [codigosol], de ìPermisos de MatrÌcula ñ Llevar cursos de otra carreraî</br>
+<p>Su solicitud N¬∞ [codigosol], de ‚ÄúPermisos de Matr√≠cula ‚Äì Llevar cursos de otra carrera‚Äù</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</br>
-<strong>GestiÛn Curricular, ProgramaciÛn Horaria y MatrÌcula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','AC','UPC','PREGRADO-UPC');
+<strong>Gesti√≥n Curricular, Programaci√≥n Horaria y Matr√≠cula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','AC','UPC','PREGRADO-UPC');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
-        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'ANULADA'),'NOT ' || V_COD_TIPO_SOL || ' ANULADA',0,0,'Respuesta a la solicitud N∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
+        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'ANULADA'),'NOT ' || V_COD_TIPO_SOL || ' ANULADA',0,0,'Respuesta a la solicitud N¬∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
 '<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N∞ [codigosol], de ìPermisos de MatrÌcula ñ Llevar cursos de otra carreraî</br>
+<p>Su solicitud N¬∞ [codigosol], de ‚ÄúPermisos de Matr√≠cula ‚Äì Llevar cursos de otra carrera‚Äù</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</br>
-<strong>GestiÛn Curricular, ProgramaciÛn Horaria y MatrÌcula.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','AC','UPC','PREGRADO-UPC');
+<strong>Gesti√≥n Curricular, Programaci√≥n Horaria y Matr√≠cula.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','AC','UPC','PREGRADO-UPC');
     
         -- FC
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
-        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE',0,0,'Respuesta a la solicitud N∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
+        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE',0,0,'Respuesta a la solicitud N¬∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
 '<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N∞ [codigosol], de ìPermisos de MatrÌcula ñ Llevar cursos de otra carreraî</br>
+<p>Su solicitud N¬∞ [codigosol], de ‚ÄúPermisos de Matr√≠cula ‚Äì Llevar cursos de otra carrera‚Äù</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</br>
-<strong>GestiÛn Curricular, ProgramaciÛn Horaria y MatrÌcula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<strong>Gesti√≥n Curricular, Programaci√≥n Horaria y Matr√≠cula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 -- ok --
  INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
-        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE PARCIALMENTE',0,0,'Respuesta a la solicitud N∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
+        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE PARCIALMENTE',0,0,'Respuesta a la solicitud N¬∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
 '<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N∞ [codigosol], de ìPermisos de MatrÌcula ñ Llevar cursos de otra carreraî</br>
+<p>Su solicitud N¬∞ [codigosol], de ‚ÄúPermisos de Matr√≠cula ‚Äì Llevar cursos de otra carrera‚Äù</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</br>
-<strong>GestiÛn Curricular, ProgramaciÛn Horaria y MatrÌcula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<strong>Gesti√≥n Curricular, Programaci√≥n Horaria y Matr√≠cula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
-        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' NO PROCEDE',0,0,'Respuesta a la solicitud N∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
+        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' NO PROCEDE',0,0,'Respuesta a la solicitud N¬∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
 '<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N∞ [codigosol], de ìPermisos de MatrÌcula ñ Llevar cursos de otra carreraî</br>
+<p>Su solicitud N¬∞ [codigosol], de ‚ÄúPermisos de Matr√≠cula ‚Äì Llevar cursos de otra carrera‚Äù</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</br>
-<strong>GestiÛn Curricular, ProgramaciÛn Horaria y MatrÌcula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<strong>Gesti√≥n Curricular, Programaci√≥n Horaria y Matr√≠cula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
-        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'ANULADA'),'NOT ' || V_COD_TIPO_SOL || ' ANULADA',0,0,'Respuesta a la solicitud N∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
+        VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'ANULADA'),'NOT ' || V_COD_TIPO_SOL || ' ANULADA',0,0,'Respuesta a la solicitud N¬∞ [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
 '<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N∞ [codigosol], de ìPermisos de MatrÌcula ñ Llevar cursos de otra carreraî</br>
+<p>Su solicitud N¬∞ [codigosol], de ‚ÄúPermisos de Matr√≠cula ‚Äì Llevar cursos de otra carrera‚Äù</br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</br>
-<strong>GestiÛn Curricular, ProgramaciÛn Horaria y MatrÌcula.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<strong>Gesti√≥n Curricular, Programaci√≥n Horaria y Matr√≠cula.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 		---------------------------------
         --  WFW_NOTF_TRAMITE_DEST --
@@ -801,7 +801,7 @@ BEGIN
         VALUES((SELECT ROL_ID FROM WFW_ROL WHERE TIPO_ROL_ID = 4 AND UPPER(NOMBRE) = C_ROL_DIRECTOR), V_ACTIVIDAD_ID_EVAL_DIRECTOR, (SELECT OPCION_ID FROM WFW_OPCION WHERE UPPER(NOMBRE) = 'RENDIR EXAMEN'), 1, C_USER, SYSDATE);
         
         INSERT INTO WFW_ROL_ACT_OPC(ROL_ID, ACTIVIDAD_ID, OPCION_ID, ACTIVO, USUARIO_CREA, FECHA_CREA)
-        VALUES((SELECT ROL_ID FROM WFW_ROL WHERE TIPO_ROL_ID = 4 AND UPPER(NOMBRE) = C_ROL_DIRECTOR), V_ACTIVIDAD_ID_EVAL_DIRECTOR, (SELECT OPCION_ID FROM WFW_OPCION WHERE UPPER(NOMBRE) = 'V∞B∞ VICERRECTOR'), 1, C_USER, SYSDATE);
+        VALUES((SELECT ROL_ID FROM WFW_ROL WHERE TIPO_ROL_ID = 4 AND UPPER(NOMBRE) = C_ROL_DIRECTOR), V_ACTIVIDAD_ID_EVAL_DIRECTOR, (SELECT OPCION_ID FROM WFW_OPCION WHERE UPPER(NOMBRE) = 'V¬∞B¬∞ VICERRECTOR'), 1, C_USER, SYSDATE);
                 
         
         COMMIT;
