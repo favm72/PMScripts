@@ -603,44 +603,44 @@ BEGIN
 	   VALUES (V_ACTIVIDAD_ID_REGISTRO,
      (SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'ACTIVIDAD' AND UPPER(VALOR) = 'TERMINADA'),
      'NOT REGISTRO TRAM ' || V_COD_TIPO_SOL,0,0,'Solicitud de ' || V_NOMBRE_TRAMITE_NOTIF,
-'<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N° [codigosol], de “' || V_NOMBRE_TRAMITE_NOTIF || ' – Llevar cursos de otra carrera”</br>
- realizado el [fechasol], se registró satisfactoriamente.</p>
-<table border="1" cellpadding="1" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td>Curso</td><td>Carrera</td><td>Estado</td></tr>[grillacursos]</table>
+'<p>[codigoalumno] - [nombrealumno]</p>
+<p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”<br>
+realizado el [fechasol], se registró satisfactoriamente.</p>
+<table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Por favor, esperar la evaluación realizada por el área correspondiente.</p>
 <p>Atentamente,</p>
-<strong>Gestión Curricular, Programación Horaria y Matrícula. </strong>','1',C_USER,SYSDATE,null,'U','AC','UPC','PREGRADO-UPC');
+<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,SYSDATE,null,'U','AC','UPC','PREGRADO-UPC');
 
         INSERT INTO WFW_NOTIFICACION (ACTIVIDAD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,FECHA_CREA,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_ACTIVIDAD_ID_EVAL_DIRECTOR,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'ACTIVIDAD' AND UPPER(VALOR) = 'PENDIENTE'),'NOT EVALUACION REENVIO DIRECTOR ' || V_COD_TIPO_SOL,0,0,'Solicitud pendiente de evaluación - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N° [codigosol], de “' || V_NOMBRE_TRAMITE_NOTIF || ' – Llevar cursos de otra carrera”</br>
- realizado el [fechasol], se registró satisfactoriamente.</p>
-<table border="1" cellpadding="1" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td>Curso</td><td>Carrera</td><td>Estado</td></tr>[grillacursos]</table>
+'<p>[codigoalumno] - [nombrealumno]</p>
+<p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”<br>
+realizado el [fechasol], se registró satisfactoriamente.</p>
+<table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Por favor, esperar la evaluación realizada por el área correspondiente.</p>
 <p>Atentamente,</p>
-<strong>Gestión Curricular, Programación Horaria y Matrícula. </strong>','1',C_USER,SYSDATE,'TRENV','U','AC','UPC','PREGRADO-UPC');
+<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,SYSDATE,'TRENV','U','AC','UPC','PREGRADO-UPC');
 
         -- FC
         INSERT INTO WFW_NOTIFICACION (ACTIVIDAD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,FECHA_CREA,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_ACTIVIDAD_ID_REGISTRO,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'ACTIVIDAD' AND UPPER(VALOR) = 'TERMINADA'),'NOT REGISTRO TRAM ' || V_COD_TIPO_SOL,0,0,'Solicitud de ' || V_NOMBRE_TRAMITE_NOTIF,
-'<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N° [codigosol], de “' || V_NOMBRE_TRAMITE_NOTIF || ' – Llevar cursos de otra carrera”</br>
- realizado el [fechasol], se registró satisfactoriamente.</p>
-<table border="1" cellpadding="1" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td>Curso</td><td>Carrera</td><td>Estado</td></tr>[grillacursos]</table>
+'<p>[codigoalumno] - [nombrealumno]</p>
+<p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”<br>
+realizado el [fechasol], se registró satisfactoriamente.</p>
+<table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Por favor, esperar la evaluación realizada por el área correspondiente.</p>
 <p>Atentamente,</p>
-<strong>Gestión Curricular, Programación Horaria y Matrícula. </strong>','1',C_USER,SYSDATE,null,'U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,SYSDATE,null,'U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
         INSERT INTO WFW_NOTIFICACION (ACTIVIDAD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,FECHA_CREA,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_ACTIVIDAD_ID_EVAL_DIRECTOR,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'ACTIVIDAD' AND UPPER(VALOR) = 'PENDIENTE'),'NOT EVALUACION REENVIO DIRECTOR ' || V_COD_TIPO_SOL,0,0,'Solicitud pendiente de evaluación - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<label>[codigoalumno] - [nombrealumno]</label></br>
-<p>Su solicitud N° [codigosol], de “' || V_NOMBRE_TRAMITE_NOTIF || ' – Llevar cursos de otra carrera”</br>
- realizado el [fechasol], se registró satisfactoriamente.</p>
-<table border="1" cellpadding="1" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td>Curso</td><td>Carrera</td><td>Estado</td></tr>[grillacursos]</table>
+'<p>[codigoalumno] - [nombrealumno]</p>
+<p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”<br>
+realizado el [fechasol], se registró satisfactoriamente.</p>
+<table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Por favor, esperar la evaluación realizada por el área correspondiente.</p>
 <p>Atentamente,</p>
-<strong>Gestión Curricular, Programación Horaria y Matrícula. </strong>','1',C_USER,SYSDATE,'TRENV','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,SYSDATE,'TRENV','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 
 
@@ -716,7 +716,7 @@ BEGIN
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
 '<p>[codigoalumno] - [nombrealumno]</p>
-<p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
+<p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”<br>
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
