@@ -717,44 +717,40 @@ realizado el [fechasol], se registró satisfactoriamente.</p>
 
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>[codigoalumno] - [nombrealumno]</p>
-<p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
- realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
+'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','AC','UPC','DIRECTOR MAOC AC');
+<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','AC','UPC','DIRECTOR MAOC AC');
 
      DBMS_OUTPUT.PUT_LINE('24-2 '|| to_char(sysdate,'DD/MM/YYYY HH:MI:SS')  );                                 
 
 -- ok --
  INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE PARCIALMENTE',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>[codigoalumno] - [nombrealumno]</p>
-<p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
- realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
+'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','AC','UPC','DIRECTOR MAOC AC');
+<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','AC','UPC','DIRECTOR MAOC AC');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' NO PROCEDE',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>[codigoalumno] - [nombrealumno]</p>
-<p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
- realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
+'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','AC','UPC','DIRECTOR MAOC AC');
+<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','AC','UPC','DIRECTOR MAOC AC');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'ANULADA'),'NOT ' || V_COD_TIPO_SOL || ' ANULADA',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>[codigoalumno] - [nombrealumno]</p>
-<p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
- realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
+'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','AC','UPC','DIRECTOR MAOC AC');
+<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','AC','UPC','DIRECTOR MAOC AC');
 
     
         -- FC
@@ -801,42 +797,38 @@ realizado el [fechasol], se registró satisfactoriamente.</p>
 
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>[codigoalumno] - [nombrealumno]</p>
-<p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”<br>
- realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
+'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','FC','UPC','DIRECTOR MAOC FC');
+<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','FC','UPC','DIRECTOR MAOC FC');
 
 -- ok --
  INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE PARCIALMENTE',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>[codigoalumno] - [nombrealumno]</p>
-<p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
- realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
+'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','FC','UPC','DIRECTOR MAOC FC');
+<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','FC','UPC','DIRECTOR MAOC FC');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' NO PROCEDE',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>[codigoalumno] - [nombrealumno]</p>
-<p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
- realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
+'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','FC','UPC','DIRECTOR MAOC FC');
+<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','FC','UPC','DIRECTOR MAOC FC');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'ANULADA'),'NOT ' || V_COD_TIPO_SOL || ' ANULADA',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>[codigoalumno] - [nombrealumno]</p>
-<p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Llevar cursos de otra carrera”</br>
- realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
+'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','FC','UPC','DIRECTOR MAOC FC');
+<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','FC','UPC','DIRECTOR MAOC FC');
 
 
     ---------------------------------
