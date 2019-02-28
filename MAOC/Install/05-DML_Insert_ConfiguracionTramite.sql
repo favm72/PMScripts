@@ -717,7 +717,8 @@ realizado el [fechasol], se registró satisfactoriamente.</p>
 
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+'<p><strong>Estimado Equipo de Matrícula,</strong></p>
+<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
@@ -728,7 +729,8 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 -- ok --
  INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE PARCIALMENTE',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+'<p><strong>Estimado Equipo de Matrícula,</strong></p>
+<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
@@ -737,7 +739,8 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' NO PROCEDE',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+'<p><strong>Estimado Equipo de Matrícula,</strong></p>
+<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
@@ -746,7 +749,8 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'ANULADA'),'NOT ' || V_COD_TIPO_SOL || ' ANULADA',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+'<p><strong>Estimado Equipo de Matrícula,</strong></p>
+<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
@@ -797,7 +801,8 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+'<p><strong>Estimado Equipo de Matrícula,</strong></p>
+<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
@@ -806,7 +811,8 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 -- ok --
  INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' PROCEDE PARCIALMENTE',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+'<p><strong>Estimado Equipo de Matrícula,</strong></p>
+<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
@@ -815,7 +821,8 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'TERMINADA'),'NOT ' || V_COD_TIPO_SOL || ' NO PROCEDE',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+'<p><strong>Estimado Equipo de Matrícula,</strong></p>
+<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
@@ -824,7 +831,8 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = 'ANULADA'),'NOT ' || V_COD_TIPO_SOL || ' ANULADA',0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
+'<p><strong>Estimado Equipo de Matrícula,</strong></p>
+<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
