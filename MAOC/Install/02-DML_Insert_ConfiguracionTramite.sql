@@ -609,16 +609,15 @@ realizado el [fechasol], se registró satisfactoriamente.</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Por favor, esperar la evaluación realizada por el área correspondiente.</p>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,SYSDATE,null,'U','AC','UPC','PREGRADO-UPC');
+<p><strong>Gestión Curricular, Programación Horaria y Matrícula</strong></p>','1',C_USER,SYSDATE,null,'U','AC','UPC','PREGRADO-UPC');
 
         INSERT INTO WFW_NOTIFICACION (ACTIVIDAD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,FECHA_CREA,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_ACTIVIDAD_ID_EVAL_DIRECTOR,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'ACTIVIDAD' AND UPPER(VALOR) = 'PENDIENTE'),'NOT EVALUACION REENVIO DIRECTOR ' || V_COD_TIPO_SOL,0,0,'Solicitud pendiente de evaluación - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p><strong>Estimado Equipo de Matrícula</strong></p>
-<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
-por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
+'<p><strong>Estimado Equipo de Matrícula,</strong></p>
+<p>El alumno [nombrealumno] con código [codigoalumno] registró satisfactoriamente la solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, el día [fechasol], en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,SYSDATE,'TRENV','U','AC','UPC','PREGRADO-UPC');
+<p><strong>Sistema de Trámites</strong></p>','1',C_USER,SYSDATE,'TRENV','U','AC','UPC','PREGRADO-UPC');
 
         -- FC
         INSERT INTO WFW_NOTIFICACION (ACTIVIDAD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,FECHA_CREA,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -629,16 +628,15 @@ realizado el [fechasol], se registró satisfactoriamente.</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Por favor, esperar la evaluación realizada por el área correspondiente.</p>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,SYSDATE,null,'U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<p><strong>Gestión Curricular, Programación Horaria y Matrícula</strong></p>','1',C_USER,SYSDATE,null,'U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
         INSERT INTO WFW_NOTIFICACION (ACTIVIDAD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,FECHA_CREA,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
         VALUES (V_ACTIVIDAD_ID_EVAL_DIRECTOR,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'ACTIVIDAD' AND UPPER(VALOR) = 'PENDIENTE'),'NOT EVALUACION REENVIO DIRECTOR ' || V_COD_TIPO_SOL,0,0,'Solicitud pendiente de evaluación - ' || V_NOMBRE_TRAMITE_NOTIF,
-'<p><strong>Estimado Equipo de Matrícula</strong></p>
-<p>La solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, registrado
-por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
+'<p><strong>Estimado Equipo de Matrícula,</strong></p>
+<p>El alumno [nombrealumno] con código [codigoalumno] registró satisfactoriamente la solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos de otra carrera”, el día [fechasol], en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,SYSDATE,'TRENV','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<p><strong>Sistema de Trámites</strong></p>','1',C_USER,SYSDATE,'TRENV','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 
 
@@ -678,7 +676,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','AC','UPC','PREGRADO-UPC');
+<p><strong>Gestión Curricular, Programación Horaria y Matrícula</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','AC','UPC','PREGRADO-UPC');
 
 -- ok --
  INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -688,7 +686,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','AC','UPC','PREGRADO-UPC');
+<p><strong>Gestión Curricular, Programación Horaria y Matrícula</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','AC','UPC','PREGRADO-UPC');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -698,7 +696,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','AC','UPC','PREGRADO-UPC');
+<p><strong>Gestión Curricular, Programación Horaria y Matrícula</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','AC','UPC','PREGRADO-UPC');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -708,7 +706,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','AC','UPC','PREGRADO-UPC');
+<p><strong>Gestión Curricular, Programación Horaria y Matrícula</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','AC','UPC','PREGRADO-UPC');
 
      DBMS_OUTPUT.PUT_LINE('24-1 '|| to_char(sysdate,'DD/MM/YYYY HH:MI:SS')  );                                 
 --Evaluador AC
@@ -720,7 +718,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','AC','UPC','DIRECTOR MAOC AC');
+<p><strong>Sistema de Trámites</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','AC','UPC','DIRECTOR MAOC AC');
 
      DBMS_OUTPUT.PUT_LINE('24-2 '|| to_char(sysdate,'DD/MM/YYYY HH:MI:SS')  );                                 
 
@@ -732,7 +730,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','AC','UPC','DIRECTOR MAOC AC');
+<p><strong>Sistema de Trámites</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','AC','UPC','DIRECTOR MAOC AC');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -742,7 +740,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','AC','UPC','DIRECTOR MAOC AC');
+<p><strong>Sistema de Trámites</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','AC','UPC','DIRECTOR MAOC AC');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -752,7 +750,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','AC','UPC','DIRECTOR MAOC AC');
+<p><strong>Sistema de Trámites</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','AC','UPC','DIRECTOR MAOC AC');
 
     
         -- FC
@@ -763,7 +761,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<p><strong>Gestión Curricular, Programación Horaria y Matrícula</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 -- ok --
  INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -773,7 +771,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<p><strong>Gestión Curricular, Programación Horaria y Matrícula</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -783,7 +781,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<p><strong>Gestión Curricular, Programación Horaria y Matrícula</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -793,7 +791,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
  realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
+<p><strong>Gestión Curricular, Programación Horaria y Matrícula</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','FC','UPC','ESTUDIOS PROFESIONALES PARA EJECUTIVOS');
 
 --Evaluador FC
 
@@ -804,7 +802,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','FC','UPC','DIRECTOR MAOC FC');
+<p><strong>Sistema de Trámites</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPROC','U','FC','UPC','DIRECTOR MAOC FC');
 
 -- ok --
  INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -814,7 +812,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','FC','UPC','DIRECTOR MAOC FC');
+<p><strong>Sistema de Trámites</strong></p>','1',C_USER,null,SYSDATE,NULL,'TPRPA','U','FC','UPC','DIRECTOR MAOC FC');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -824,7 +822,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','FC','UPC','DIRECTOR MAOC FC');
+<p><strong>Sistema de Trámites</strong></p>','1',C_USER,null,SYSDATE,NULL,'TRECH','U','FC','UPC','DIRECTOR MAOC FC');
 
 -- ok --
         INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
@@ -834,7 +832,7 @@ por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha 
 por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
 <p>Atentamente,</p>
-<p><strong>Sistema de Trámites.</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','FC','UPC','DIRECTOR MAOC FC');
+<p><strong>Sistema de Trámites</strong></p>','1',C_USER,null,SYSDATE,NULL,NULL,'U','FC','UPC','DIRECTOR MAOC FC');
 
 
     ---------------------------------
