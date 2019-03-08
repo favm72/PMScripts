@@ -526,21 +526,22 @@ BEGIN
                 INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
                 VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = e.ESTADO),'NOT ' || V_COD_TIPO_SOL || ' ' || e.SUBESTADO,0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
                 '<p>[codigoalumno] - [nombrealumno]</p>
-                <p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Dispersión de Niveles”<br>
-                realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
-                <table border="1" cellpadding="1" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td>CURSO<td/><td>CARRERA<td/><td>ESTADO<td/></tr>[grillacursos]</table>
-                <p>Para obtener más información sobre la solicitud, haz click [link]</p>        
+                <p>Su solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos por dispersión de niveles”</br>
+                realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] y podrás visualizarlos durante la Matrícula en línea.</p>
+                <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
+                <p>(*) El curso no se dicta en la sede actual de alumno</p>
                 <p>Atentamente,</p>
-                <p><strong>Gestión Curricular, Programación Horaria y Matrícula</strong></p>','1',C_USER,null,SYSDATE,NULL,e.CODIGO_NOTIF,'U',m.COD_MODAL_EST,'UPC',m.NOMBRE);
+                <p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,e.CODIGO_NOTIF,'U',m.COD_MODAL_EST,'UPC',m.NOMBRE);
             
                 INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
                 VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = e.ESTADO),'NOT ' || V_COD_TIPO_SOL || ' ' || e.SUBESTADO,0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
-                '<p><strong>Estimado Equipo de Matrícula,</strong></p>
-                <p>La solicitud N° [codigosol] de “Permisos de Matrícula – Dispersión de Niveles”, registrado
-                por el alumno [nombrealumno] con código [codigoalumno], el día [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
-                <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">CARRERA</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
+                '<p>[codigoalumno] - [nombrealumno]</p>
+                <p>Su solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos por dispersión de niveles”</br>
+                realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] y podrás visualizarlos durante la Matrícula en línea.</p>
+                <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
+                <p>(*) El curso no se dicta en la sede actual de alumno</p>
                 <p>Atentamente,</p>
-                <p><strong>Sistema de Trámites</strong></p>','1',C_USER,null,SYSDATE,NULL,e.CODIGO_NOTIF,'U',m.COD_MODAL_EST,'UPC','DIRECTOR DISP ' || m.COD_MODAL_EST);
+                <p><strong>Gestión Curricular, Programación Horaria y Matrícula.</strong></p>','1',C_USER,null,SYSDATE,NULL,e.CODIGO_NOTIF,'U',m.COD_MODAL_EST,'UPC','DIRECTOR DISP ' || m.COD_MODAL_EST);
             end loop;
         end loop;
 
