@@ -524,7 +524,7 @@ BEGIN
         for m in cur_modalidad loop  
             for e in cur_estado_sol loop
                 INSERT INTO WFW_NOTF_TRAMITE (TIPO_SOLICITUD_ID,ESTADO_ID,NOMBRE,TIEMPO_POST,TIEMPO_PRE,ASUNTO,MENSAJE,ACTIVO,USUARIO_CREA,USUARIO_MOD,FECHA_CREA,FECHA_MOD,CODIGO_NOTIF,COD_LINEA_NEGOCIO,COD_MODAL_ESTUDIO,DESC_LINEA_NEGOCIO,DESC_MODAL_ESTUDIO)
-                VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = e.ESTADO),'NOT ' || V_COD_TIPO_SOL || ' ' || e.SUBESTADO,0,0,'Respuesta de la solicitud de ' || V_NOMBRE_TRAMITE_NOTIF,
+                VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = e.ESTADO),'NOT ' || V_COD_TIPO_SOL || ' ' || e.SUBESTADO,0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
                 '<p>[codigoalumno] - [nombrealumno]</p>
                 <p>Su solicitud N° [codigosol], de “Permisos de Matrícula – Dispersión de Niveles”<br>
                 realizado el [fechasol], ha sido aprobada para el periodo [semestre_periodo] en los siguientes cursos:</p>
