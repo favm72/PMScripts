@@ -81,8 +81,8 @@ DECLARE
     -- Estados solicitud
     CURSOR cur_estado_sol is
     SELECT 'TERMINADA' as ESTADO, 'PROCEDE' as SUBESTADO, 'TPROC' as CODIGO_NOTIF from dual union all
-    select 'TERMINADA' as ESTADO, 'NO PROCEDE' as SUBESTADO, 'TPRPA' as CODIGO_NOTIF from dual union all
-    select 'TERMINADA' as ESTADO, 'PROCEDE PARCIALMENTE' as SUBESTADO, 'TRECH' as CODIGO_NOTIF from dual union all
+    select 'TERMINADA' as ESTADO, 'NO PROCEDE' as SUBESTADO, 'TRECH' as CODIGO_NOTIF from dual union all
+    select 'TERMINADA' as ESTADO, 'PROCEDE PARCIALMENTE' as SUBESTADO, 'TPRPA' as CODIGO_NOTIF from dual union all
     select 'ANULADA' as ESTADO, 'ANULADA' as SUBESTADO, null as CODIGO_NOTIF from dual;
 
 BEGIN
