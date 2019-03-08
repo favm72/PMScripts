@@ -527,7 +527,7 @@ BEGIN
                 VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = e.ESTADO),'NOT ' || V_COD_TIPO_SOL || ' ' || e.SUBESTADO,0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
                 '<p>[codigoalumno] - [nombrealumno]</p>
                 <p>Su solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos por dispersión de niveles”</br>
-                realizado el [fechasol], [resultado_tramite] para el periodo [semestre_periodo] y podrás visualizarlos durante la Matrícula en línea.</p>
+                realizado el [fechasol], '||LOWER(e.SUBESTADO)||' para el periodo [semestre_periodo] y podrás visualizarlos durante la Matrícula en línea.</p>
                 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
                 <p>(*) El curso no se dicta en la sede actual de alumno</p>
                 <p>Atentamente,</p>
@@ -537,7 +537,7 @@ BEGIN
                 VALUES (V_TIPO_SOLICITUD_ID,(SELECT ESTADO_ID FROM WFW_ESTADO WHERE UPPER(GRUPO) = 'SOLICITUD' AND UPPER(VALOR) = e.ESTADO),'NOT ' || V_COD_TIPO_SOL || ' ' || e.SUBESTADO,0,0,'Respuesta a la solicitud N° [codigoalumno] - ' || V_NOMBRE_TRAMITE_NOTIF,
                 '<p>[codigoalumno] - [nombrealumno]</p>
                 <p>Su solicitud N° [codigosol] de “Permisos de Matrícula – Llevar cursos por dispersión de niveles”</br>
-                realizado el [fechasol], [resultado_tramite] para el periodo [semestre_periodo] y podrás visualizarlos durante la Matrícula en línea.</p>
+                realizado el [fechasol], '||LOWER(e.SUBESTADO)||' para el periodo [semestre_periodo] y podrás visualizarlos durante la Matrícula en línea.</p>
                 <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td align="center">CURSOS</td><td align="center">ESTADO</td></tr>[grillacursos]</table>
                 <p>(*) El curso no se dicta en la sede actual de alumno</p>
                 <p>Atentamente,</p>
