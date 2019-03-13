@@ -480,7 +480,7 @@ BEGIN
             '<p>[codigoalumno] - [nombrealumno]</p>
             <p>Su solicitud N° [codigosol], de “Permiso de Matrícula – Dispersión de Niveles”<br>
             realizado el [fechasol], se registró satisfactoriamente.</p>
-            <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td>CURSO</td><td>CARRERA</td><td>ESTADO</td></tr>[grillacursos]</table>
+            <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td>CURSO</td><td>ESTADO</td></tr>[grillacursos]</table>
             <p>Por favor, esperar la evaluación realizada por el área correspondiente.</p>
             <p>Atentamente,</p>
             <p><strong>Gestión Curricular, Programación Horaria y Matrícula</strong></p>','1',C_USER,SYSDATE,null,'U',m.COD_MODAL_EST,'UPC',m.NOMBRE);
@@ -490,7 +490,7 @@ BEGIN
             '<p>[codigoalumno] - [nombrealumno]</p>
             <p>Su solicitud N° [codigosol], de “Permiso de Matrícula – Dispersión de Niveles”<br>
             realizado el [fechasol], se registró satisfactoriamente.</p>
-            <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td>CURSO</td><td>CARRERA</td><td>ESTADO</td></tr>[grillacursos]</table>
+            <table border="1" cellpadding="4" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;"><tr><td>CURSO</td><td>ESTADO</td></tr>[grillacursos]</table>
             <p>Por favor, esperar la evaluación realizada por el área correspondiente.</p>
             <p>Atentamente,</p>
             <p><strong>Gestión Curricular, Programación Horaria y Matrícula</strong></p>','1',C_USER,SYSDATE,'TRENV','U',m.COD_MODAL_EST,'UPC',m.NOMBRE);
